@@ -67,10 +67,9 @@ client.on('message', message => {
             if (battleSuppliesOn) {
                 let args = message.content.split(" ").slice(1);
                 let postLink = args[0];
-                let HotERoleObject = message.guild.roles.get("300710625750024195");
                 let ImpCORoleObject = message.guild.roles.get("303019801209470987"); {
                     if (postLink) {
-                        message.channel.send(`Guns are currently being distributed. A member of ${HotERoleObject} & ${ImpCORoleObject} has been notified, and will supply you shortly.`);
+                        message.channel.send(`Guns are currently being distributed. A member of ${ImpCORoleObject} has been notified, and will supply you shortly.`);
                     } else {
                         message.channel.send('Guns are currently being distributed. Please post your profile link.');
                     }
