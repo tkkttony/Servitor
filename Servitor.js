@@ -43,7 +43,7 @@ if (commandIs('changelog', message)) {
 ;
 if (commandIs('501st', message)) {
     if (message.member.roles.has('329292467956350976')) {
-        var eliteReplies = [
+        const eliteReplies = [
             '@xxxx[{::::::::::::::::::::::::::::::::::: The Emperor\'s Elite',
             'We strike with the Emperor\'s Fist!',
             'We are the proof of the Emperor\'s might!',
@@ -53,7 +53,7 @@ if (commandIs('501st', message)) {
             'By the Emperor\'s will, we fight!',
             'Witness the Glory of the Emperor, through us!',
         ];
-        var randomNumber = Math.floor(Math.random() * eliteReplies.length);
+        let randomNumber = Math.floor(Math.random() * eliteReplies.length);
         {
             message.channel.send(eliteReplies[randomNumber]);
         }
@@ -153,7 +153,7 @@ if (commandIs('openhotel', message)) {
 }
 if (message.content.match(/Initiate Servitor Launch Sequence./i)) {
     if (message.member.roles.has('329292467956350976')) {
-        var onlineReplies = [
+        const onlineReplies = [
             'Servitor Online.',
             'Servitor Systems: Operational.',
             'Ready for Battle.',
@@ -180,20 +180,20 @@ if (message.content.match(/Initiate Servitor Launch Sequence./i)) {
             'I stand ready to server.',
             'The hand of the Emperor guides all.',
         ];
-        var randomNumber = Math.floor(Math.random() * onlineReplies.length);
+        let randomNumber = Math.floor(Math.random() * onlineReplies.length);
         message.channel.send(onlineReplies[randomNumber]);
         dayResetAnnounce();
     }
 }
 
 function dayReset(time) {
-    var d = new Date();
-    var hours = 24 - d.getHours() - 1;
-    var min = 60 - d.getMinutes();
+    const d = new Date();
+    const hours = 24 - d.getHours() - 1;
+    const min = 60 - d.getMinutes();
     if ((min + '').length == 1) {
         min = '0' + min;
     }
-    var sec = 60 - d.getSeconds();
+    const sec = 60 - d.getSeconds();
     if ((sec + '').length == 1) {
         sec = '0' + sec;
     }
@@ -206,18 +206,18 @@ if (commandIs('day reset', message)) {
 }
 
 function dayResetAnnounce() {
-    var schedule = require('node-schedule');
-    var rule = new schedule.RecurrenceRule();
+    let schedule = require('node-schedule');
+    let rule = new schedule.RecurrenceRule();
     rule.hour = 00;
     rule.minute = 00;
     console.log('Day Reset Announce running.')
-    var j = schedule.scheduleJob(rule, function () {
+    let j = schedule.scheduleJob(rule, function () {
         client.channels.get("300708598588243968").send('The Day has been reset.')
     })
 }
 
 if (message.content.match(/hi|hello|hey/i) && (message.content.match('335113541449285652'))) {
-    var selectedReplies = [
+    let selectedReplies = [
         'Stop poking me!',
         'Your taunts are ill-advised, ' + message.author.username + '.',
         'What?',
@@ -236,7 +236,7 @@ if (message.content.match(/hi|hello|hey/i) && (message.content.match('3351135414
         'I knew you\'d say that.',
         'You are strong, ' + message.author.username + '.' + 'It will be good to have that strength... and your boots and your motorcycle.',
     ];
-    var selectedBattleReplies = [
+    let selectedBattleReplies = [
         'Show them no mercy!',
         'Push the attack!',
         'Vanquish the weak!',
@@ -275,8 +275,8 @@ if (message.content.match(/hi|hello|hey/i) && (message.content.match('3351135414
         'You are strong. It will be good to have that strength... and your rank and weapons.',
         'Purge the weeb!'
     ];
-    var randomNumber = Math.floor(Math.random() * selectedReplies.length);
-    var randomNumber1 = Math.floor(Math.random() * selectedBattleReplies.length);
+    let randomNumber = Math.floor(Math.random() * selectedReplies.length);
+    let randomNumber1 = Math.floor(Math.random() * selectedBattleReplies.length);
     {
         if (battleSuppliesOn && message.member.roles.has("303019313248337920")) {
             message.channel.send(selectedBattleReplies[randomNumber1])
@@ -286,5 +286,6 @@ if (message.content.match(/hi|hello|hey/i) && (message.content.match('3351135414
         ;
     }
 }
-});
+{
+}})
 ;
