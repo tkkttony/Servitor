@@ -1,11 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const config = require("./config.json")
+const token = config.token
 
 function commandIs(str, msg) {
     return msg.content.toLowerCase().startsWith("!" + str);
 }
-var battleSuppliesOn = false;
-var hotelRentSpaceOn = false;
+const battleSuppliesOn = false;
+const hotelRentSpaceOn = false;
 
 client.on('ready', () => {
     console.log('Online');
@@ -284,8 +286,8 @@ if (message.content.match(/hi|hello|hey/i) && (message.content.match('3351135414
             message.channel.send(selectedReplies[randomNumber])
         }
         ;
-    }
-}
-{
+    }  
+      
 }})
+client.login(config.token);
 ;
