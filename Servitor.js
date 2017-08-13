@@ -37,6 +37,9 @@ if (commandIs('daychange', message)) {
 if (commandIs('army', message)) {
     message.channel.send('The Imperial Armed Forces application is here: https://tinyurl.com/vimperialarmy');
 }
+if (commandIs('changelog', message)) {
+    message.channel.send('Servitor is open-source! All the new updates can be seen here https://github.com/tkkttony/Servitor')
+}
 ;
 if (commandIs('501st', message)) {
     if (message.member.roles.has('329292467956350976')) {
@@ -82,11 +85,9 @@ function hotelRentSpaceToggle() {
 if (commandIs('guns', message)) {
     if (message.member.roles.has("303019313248337920"))
         if (battleSuppliesOn) {
-            let args = message.content.split(" ").slice(1);
-            let postLink = args[0]
             let ImpCORoleObject = message.guild.roles.get("303019801209470987");
             {
-                if (postLink) {
+                if (message.content.match(/vpopulus\.net/i)) { 
                     message.channel.send(`Guns are currently being distributed. A member of ${ImpCORoleObject} has been notified, and will supply you shortly.`);
                 } else {
                     message.channel.send('Guns are currently being distributed. Please post your profile link.');
@@ -101,11 +102,9 @@ if (commandIs('guns', message)) {
 if (commandIs('hotel', message)) {
     if (message.member.roles.has("303019313248337920"))
         if (hotelRentSpaceOn) {
-            let args = message.content.split(" ").slice(1);
-            let postLink = args[0]
             let ImpCORoleObject = message.guild.roles.get("303019801209470987");
             {
-                if (postLink) {
+                if (message.content.match(/vpopulus\.net/i)) { 
                     message.channel.send(`Hotel spaces are currently available. A member of ${ImpCORoleObject} has been notified, and will give you a space shortly.`);
                 } else {
                     message.channel.send('Hotel spaces are currently available. Please post your profile link.');
@@ -127,7 +126,8 @@ if (commandIs('help', message)) {
                 },
                 title: "Here's a list of useful commands.",
                 description: `!guns - Check if the army is distributing guns.
-!day reset - Check when is next day reset.`,
+!day reset - Check when is next day reset.
+!hotel - Check if we have rooms open.`,
                 /*fields: [{
                     name: "Additional Fields",
                     value: "Here you can write in more things!" 
