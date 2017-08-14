@@ -6,8 +6,8 @@ const token = config.token
 function commandIs(str, msg) {
     return msg.content.toLowerCase().startsWith("!" + str);
 }
-const battleSuppliesOn = false;
-const hotelRentSpaceOn = false;
+let battleSuppliesOn = false;
+let hotelRentSpaceOn = false;
 
 client.on('ready', () => {
     console.log('Online');
