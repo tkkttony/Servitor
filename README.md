@@ -20,7 +20,7 @@
 discord.js is a powerful [node.js](https://nodejs.org) module that allows you to interact with the
 [Discord API](https://discordapp.com/developers/docs/intro) very easily.
 
-##Servitor
+## Servitor
 
 ***Servitor*** is a bot themed for a geostrategical game called vPopulus and uses Discord.js as a base.
 > If you want to help us develop Servitor to the best you can, please contact tkkttony!
