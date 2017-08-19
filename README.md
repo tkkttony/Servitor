@@ -29,4 +29,5 @@ discord.js is a powerful [node.js](https://nodejs.org) module that allows you to
 ### Requirements
 - `git` ([Windows](https://git-scm.com/download/win) | [Linux](https://git-scm.com/download/linux) | [macOS](https://git-scm.com/download/mac))
 - `node` ([Windows](https://nodejs.org/en/download/current/) | [Linux](https://nodejs.org/en/download/package-manager/) | [macOS](https://nodejs.org/en/download/current/)) (make sure to get newest version)
- - `And after that make sure to npm discord.js --save`
+- `npm install node-schedule` 
+- `npm install discord.js --save`
