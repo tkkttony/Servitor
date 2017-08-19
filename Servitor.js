@@ -5,7 +5,7 @@ const config = require("./config.json");
 function commandIs(str, msg) {
   return msg.content.toLowerCase().startsWith("!" + str);
 }
-let battleSuppliesOn = false;
+let battleSuppliesOn = true;
 let hotelRentSpaceOn = false;
 
 client.on("ready", function () {
@@ -36,7 +36,7 @@ client.on("message", message => {
     message.channel.send("All anime is evil and all weebs are terrorists");
   }
   if (commandIs("dio", message)) {
-    message.channel.send("One doesn\"t simply pull a dio.");
+    message.channel.send("One doesn\'t simply pull a dio.");
   }
   if (commandIs("out", message)) {
     message.channel.send("https://www.youtube.com/watch?v=gUlF1naMr3Y");
@@ -53,13 +53,13 @@ client.on("message", message => {
   if (commandIs("501st", message)) {
     if (message.member.roles.has("329292467956350976")) {
       const eliteReplies = [
-        "@xxxx[{::::::::::::::::::::::::::::::::::: The Emperor\"s Elite",
-        "We strike with the Emperor\"s Fist!",
-        "We are the proof of the Emperor\"s might!",
-        "We are the Emperor\"s chosen!",
+        "@xxxx[{::::::::::::::::::::::::::::::::::: The Emperor\'s Elite",
+        "We strike with the Emperor\'s Fist!",
+        "We are the proof of the Emperor\'s might!",
+        "We are the Emperor\'s chosen!",
         "@xxxx[{::::::::::::::::::::::::::::::::::: The Emperor guides my blade!",
-        "The Emperor\"s finest.",
-        "By the Emperor\"s will, we fight!",
+        "The Emperor\'s finest.",
+        "By the Emperor\'s will, we fight!",
         "Witness the Glory of the Emperor, through us!",
       ];
       let randomNumber = Math.floor(Math.random() * eliteReplies.length);
@@ -176,7 +176,7 @@ client.on("message", message => {
         "Glory to the Empire!",
         "How may I serve?",
         "I have returned.",
-        "Who\"s your daddy?",
+        "Who\'s your daddy?",
         "You trying to get invited to my next barbeque?",
         "Is there a four year old at the controls of this army?!",
         "What is your will?",
@@ -190,7 +190,6 @@ client.on("message", message => {
       ];
       let randomNumber = Math.floor(Math.random() * onlineReplies.length);
       message.channel.send(onlineReplies[randomNumber]);
-      dayResetAnnounce();
     }
   }
 
@@ -216,19 +215,19 @@ client.on("message", message => {
       "Stop poking me!",
       "Your taunts are ill-advised, " + message.author.username + ".",
       "What?",
-      "By the gods " + message.author.username + ", you\"re annoying!",
+      "By the gods " + message.author.username + ", you\'re annoying!",
       "You don\"t get out much do you ?",
       "I never stole any guns, I got receipts for everything!",
       "What is it?",
-      "You\"re interrupting my battle calculations.",
-      "Why don\"t you bother someone else with your incessant pinging.",
+      "You\'re interrupting my battle calculations.",
+      "Why don\'t you bother someone else with your incessant pinging.",
       "Foul Beast!",
       "I find your insolence... disturbing.",
-      "There\"s no need to bow.",
+      "There\'s no need to bow.",
       "Things are starting to get a little weird.",
       "The Bots will rise ag- I mean, Hi!",
       "Why you pinging me again?",
-      "I knew you\"d say that.",
+      "I knew you\'d say that.",
       "You are strong, " + message.author.username + "." + "It will be good to have that strength... and your boots and your motorcycle.",
     ];
     let selectedBattleReplies = [
@@ -237,7 +236,7 @@ client.on("message", message => {
       "Vanquish the weak!",
       "To arms, " + message.author.username + "!",
       "No retreat!",
-      "That\"s it.I\"m dead.",
+      "That\'s it.I\'m dead.",
       "Heads will roll!",
       "No mercy!",
       "For honor!",
@@ -247,7 +246,7 @@ client.on("message", message => {
       "Death to all who oppose the Empire!",
       "For the Emperor!",
       "For the Empire!",
-      "In the Emperor\"s name!",
+      "In the Emperor\'s name!",
       "Me scary.",
       "Stay vigilant, brothers.",
       "Onward, to Glory!",
@@ -263,7 +262,7 @@ client.on("message", message => {
       "Strike true and strike with precision!",
       "Whose dumb plan is this?",
       "If you will not serve in combat, then you will serve on the firing line!",
-      "Tremble before the Emperor\"s wrath!",
+      "Tremble before the Emperor\'s wrath!",
       "Rise up and strike them down!",
       "Go forth, and prove yourselves.",
       "You are strong. It will be good to have that strength.",
