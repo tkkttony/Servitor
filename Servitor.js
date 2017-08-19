@@ -33,7 +33,7 @@ client.on("message", message => {
     message.channel.send("LISTEN HERE YOU LITTLE SHITS. COMMAND EITHER CALCULATED HOW MANY GUNS PEOPLE GET, OR WILL PASS OUT THE GUNS AFTER YOU CALCULATE, OR IS BUSY AND WILL DO NEITHER. YOU PLEBS NEED TO GET ON IT AND START SUPPLYING CAPICHE?");
   }
   if (commandIs("anime", message)) {
-    message.channel.send("All anime is evil and all weebs are terrorists");
+    message.channel.send("All anime is evil and all weebs are terrorists.");
   }
   if (commandIs("dio", message)) {
     message.channel.send("One doesn\'t simply pull a dio.");
@@ -156,7 +156,7 @@ client.on("message", message => {
     if (message.member.roles.has("300710625750024195")) {
       hotelRentSpaceToggle();
     } else {
-      message.channel.send("Haha, you don't have the master key");
+      message.channel.send("Haha, you don't have the master key.");
     }
   }
   if (message.content.match(/Initiate Servitor Launch Sequence./i)) {
@@ -216,7 +216,7 @@ client.on("message", message => {
       "Your taunts are ill-advised, " + message.author.username + ".",
       "What?",
       "By the gods " + message.author.username + ", you\'re annoying!",
-      "You don\"t get out much do you ?",
+      "You don\'t get out much do you ?",
       "I never stole any guns, I got receipts for everything!",
       "What is it?",
       "You\'re interrupting my battle calculations.",
