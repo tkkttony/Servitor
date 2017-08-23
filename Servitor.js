@@ -47,6 +47,9 @@ client.on("message", message => {
   if (commandIs("army", message)) {
     message.channel.send("The Imperial Armed Forces application is here: https://tinyurl.com/vimperialarmy");
   }
+  if (commandIs("poland", message)) {
+    message.channel.send("Sucks!");
+  }
   if (commandIs("changelog", message)) {
     message.channel.send("Servitor is open-source! All the new updates can be seen here https://github.com/tkkttony/Servitor");
   }
